@@ -28,3 +28,6 @@ RUN pip install \
 RUN git clone https://github.com/bernhard-42/jupyter-cadquery.git \
     && pip install ./jupyter-cadquery \
     && jupyter-labextension install ./jupyter-cadquery/js
+
+# Make sure the contents of our repo are in ${HOME}
+COPY . ${HOME}
